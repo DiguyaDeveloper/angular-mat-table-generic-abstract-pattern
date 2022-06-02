@@ -11,7 +11,6 @@ import { TableColumns } from '../../../core/interfaces/table-columns.interface';
 import { Table } from './table.class';
 import { ExpandCollapse } from './table.animations';
 import { MatSort, Sort } from '@angular/material/sort';
-import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'ceccoff-table',
