@@ -1,0 +1,9 @@
+<ng-container
+  [ngTemplateOutlet]="tableHeader"
+  [ngTemplateOutletContext]="{ header: column.header }"
+></ng-container>
+
+<!-- Config template to table header -->
+<ng-template #tableHeader let-header="header">
+  <span [innerHTML]="header.displayName | uppercase"> </span>
+</ng-template>

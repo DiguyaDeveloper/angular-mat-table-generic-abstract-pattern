@@ -1,0 +1,17 @@
+<ceccoff-table
+  [table]="table"
+  [columns]="columns"
+  [selectable]="true"
+  [expandable]="expandable"
+  [sortingOffline]="true"
+></ceccoff-table>
+
+<mat-paginator
+  [pageSize]="10"
+  [length]="table.currentPage.value.length"
+  [showFirstLastButtons]="table.currentPage.value.showFirstLastButtons"
+  [pageSizeOptions]="table.currentPage.value.pageSizeOptions"
+></mat-paginator>
+<ng-container *ngIf="table.currentPage | async as pagination">
+  {{ pagination | json }}
+</ng-container>

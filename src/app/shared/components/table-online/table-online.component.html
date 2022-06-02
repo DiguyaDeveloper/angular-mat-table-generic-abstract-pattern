@@ -1,0 +1,24 @@
+<ceccoff-table
+  [table]="table"
+  [columns]="columns"
+  [selectable]="true"
+  [expandable]="expandable"
+  (sortEvent)="sortEvent($event)"
+></ceccoff-table>
+
+<mat-progress-bar
+  mode="indeterminate"
+  *ngIf="table.isLoading"
+></mat-progress-bar>
+
+<ng-container *ngIf="table.currentPage | async as pagination">
+  <mat-paginator
+    (page)="paginationEvent($event)"
+    [pageSize]="pagination.size"
+    [pageIndex]="pagination.page"
+    [length]="pagination.length"
+    [showFirstLastButtons]="pagination.showFirstLastButtons"
+    [pageSizeOptions]="pagination.pageSizeOptions"
+    [disabled]="table.isLoading"
+  ></mat-paginator>
+</ng-container>

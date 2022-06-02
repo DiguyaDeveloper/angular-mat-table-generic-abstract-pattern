@@ -1,0 +1,12 @@
+<ng-container *ngIf="column.cell as cell">
+  <ng-container *ngIf="cell.templateRef; else elseTemplate">
+    <!-- show templateRef in cell and return data to father component-->
+    <ng-container
+      [ngTemplateOutlet]="cell.templateRef"
+      [ngTemplateOutletContext]="{ $rowData: row }"
+    ></ng-container>
+  </ng-container>
+  <ng-template #elseTemplate>
+    {{ cell?.getValue && cell?.getValue(row) }}
+  </ng-template>
+</ng-container>
