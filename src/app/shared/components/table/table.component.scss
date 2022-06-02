@@ -27,10 +27,7 @@ tr > .expanded-row {
 }
 
 .element-expanded {
-  width: 100%;
-  height: 100%;
   position: relative;
-  height: 100px;
 }
 .element-expanded {
   display: flex;
@@ -45,7 +42,7 @@ tr > .expanded-row {
     width: 100%;
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 6px;
     background-color: #14b88c;
@@ -59,7 +56,7 @@ tr > .expanded-row {
 }
 
 .expanded-row::before {
-  content: "";
+  content: '';
   border-bottom: 2px solid rgba(40, 40, 40, 0.1);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -72,7 +69,7 @@ tr > .expanded-row {
 }
 
 .expanded-row::after {
-  content: "";
+  content: '';
   border-top: 2px solid rgba(40, 40, 40, 0.1);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
